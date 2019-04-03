@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix = "W";
+var prefix = "-";
 client.on('ready', () => {
    console.log(`----------------`);
       console.log(`Desert Bot- Script By : EX Clan`);
@@ -14,7 +14,7 @@ client.user.setStatus("dnd")
 
 client.on("message", async message => {
         if(!message.channel.guild) return;
- var prefix= "W";
+ var prefix= "-";
         if(message.content.startsWith(prefix + 'server')) {
         let guild = message.guild
         let channel = message.channel
@@ -48,7 +48,7 @@ client.on("message", async message => {
     });
 
 client.on('message', function(message) {
-    if (message.content == "Wclear") {
+    if (message.content == "-clear") {
         if (message.member.hasPermission("MANAGE_MESSAGES")) {
             message.channel.fetchMessages()
                .then(function(list){
@@ -60,7 +60,7 @@ client.on('message', function(message) {
 });
 	
   client.on('message', message => {
-    if (message.content.startsWith("+link")) {
+    if (message.content.startsWith("-link")) {
 
   message.channel.createInvite({
         thing: true,
@@ -80,7 +80,7 @@ message.author.send(`**مدة الرابط : يـوم
 
 client.on('message', message => {
 
-    if (message.content === "Wmc") {
+    if (message.content === "-mc") {
                         if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ليس لديك صلاحيات');
@@ -91,7 +91,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' لي
                message.reply("تم تقفيل الشات ? ")
            });
              }
-if (message.content === "Wumc") {
+if (message.content === "-umc") {
     if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
@@ -108,7 +108,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
 });
 
 client.on('message', message => {
-const prefix = "W";
+const prefix = "-";
   if (message.author.kick) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -290,7 +290,7 @@ if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return mess
 });
 
 client.on("message", message => {
-    var prefix = "Ws";
+    var prefix = "-";
         if (message.author.id === client.user.id) return;
         if (message.guild) {
        let embed = new Discord.RichEmbed()
@@ -322,7 +322,7 @@ client.on("message", message => {
 client.on('message', message => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('Wbc-users')){
+if (message.content.startsWith('-bc')){
 if(!message.author.id === '461059496861630465') return;
 message.channel.sendMessage('جار ارسال الرسالة |✅')
 client.users.forEach(m =>{
@@ -332,7 +332,7 @@ m.sendMessage(args)
 });
 
 client.on("message", msg => {
-    var prefix = "W";
+    var prefix = "-";
 if(msg.content.startsWith (prefix + "id")) {
 if(!msg.channel.guild) return msg.reply('**❌ اسف لكن هذا الامر للسيرفرات فقط **');         
 const embed = new Discord.RichEmbed();
@@ -352,7 +352,7 @@ msg.channel.send({embed: embed})
 });
 
 client.on("message", message => {
-    if (message.content === "Wrules") {
+    if (message.content === "-rules") {
            message.react("✅")
               message.react("❌")
      const embed = new Discord.RichEmbed() 
@@ -437,75 +437,75 @@ message.channel.sendEmbed(id);
 
 
  client.on('message', message => {
-  var prefix = "W";
+  var prefix = "-";
  if (message.content.startsWith(prefix + 'help')) {
      let pages = [
  	`=-=-=-=-=-=** 🌍 Public Commands - اوامر عامة 🌍 **=-=-=-=-=-=
-**     ❖ +id ======> To Show Your ID | ايدي حسابك
-     ❖ +ping ====> Ping Of Bot | بنج حك البوت
-     ❖ +info =====> Information Of The Bot | معلومات البوت
-     ❖ +server ==> Information Of The Server | معلومات السيرفر
-     ❖ +cal =====> To Calculate | اله لحاسبة 
-     ❖ +rooms ===> Show Rooms Of Server | اضهار الرومات الي في السيرفر
-     ❖ +roles ===> Show Roles Of The Server | اضهار الرانكات
-     ❖ +emojis ==> Emoji Of Server | ايموجيات السيرفر   
-     ❖ +say =====> The Bot Say Any Thing | تكرار اي شي كتبتو
-     ❖ +ser-av ===> To Show Image Of Server | لاضهار صورة السيرف 
-     ❖ +embed ===> To Embed | لتكرار اي شي كتبتو بطريقة حلوة
-     ❖ +avatar ==> Your Avatar |صورتك الشخصية
+**   ❖ -id ======> To Show Your ID | ايدي حسابك
+     ❖ -ping ====> Ping Of Bot | بنج حك البوت
+     ❖ -info =====> Information Of The Bot | معلومات البوت
+     ❖ -server ==> Information Of The Server | معلومات السيرفر
+     ❖ -cal =====> To Calculate | اله لحاسبة 
+     ❖ -rooms ===> Show Rooms Of Server | اضهار الرومات الي في السيرفر
+     ❖ -roles ===> Show Roles Of The Server | اضهار الرانكات
+     ❖ -emojis ==> Emoji Of Server | ايموجيات السيرفر   
+     ❖ -say =====> The Bot Say Any Thing | تكرار اي شي كتبتو
+     ❖ -ser-av ===> To Show Image Of Server | لاضهار صورة السيرف 
+     ❖ -embed ===> To Embed | لتكرار اي شي كتبتو بطريقة حلوة
+     ❖ -avatar ==> Your Avatar |صورتك الشخصية
 **
      ===========================================================
        React With ▶ To See Admins Commands`,
  	`=-=-=-=-=-= **🔧  Admin Commands - اوامر ادارية 🔧** =-=-=-=-=-=
-     **❖ +move @user => Move User To Your Room Voice | لسحب الشخص الى روومك
-     ❖ +mvall => Move All To Your Room Voice | لسحب الجميع الي روومك
-     ❖ +bc => Broadcast | رسالة جماعية الى كل اعضاء السيرفر
-     ❖ +role @user <rank> => Give User Rank | لأعطاء رتبة لعضو معين
-     ❖ +roleremove @user <rank> => remove Rank From User | لازالة الرتبة من شخص معين
-     ❖ +role all <rank> => Give All Rank | لأعطاء رتبة للجميع
-     ❖ +role humans <rank> => Give Humans Rank | لأعطاء رتبة للاشخاص فقط
-     ❖ +role bots <rank> => Give Bots Rank | لأعطاء رتبة لجميع البوتات
-     ❖ +clear => Clear Chat | مسح الشات
-     ❖ +mute @user <reason> => Mute User | اعطاء العضو ميوت لازم رتبة <Muted>
-     ❖ +unmute @user => Unmute User | لفك الميوت عن الشخص 
-     ❖ +kick @user <reason> => Kick User From Server | طرد الشخص من السيرفر
-     ❖ +ban @user <reason> => Ban User From Server | حضر الشخص من السيرفر
-     ❖ +mct => Mute Channel | تقفيل الشات
-     ❖ +unmct => Unmute Channel | فتح الشات
-     ❖ +kv @user => Voice Kick | يطرد شخص من الرووم
-     ❖ +vonline => Create Channel Voice Online | يسوي رووم فويس اونلاين
-     ❖ +bans  ==> ban list | الاشخاص الي تبندو
+     **❖ -move @user => Move User To Your Room Voice | لسحب الشخص الى روومك
+     ❖ -mvall => Move All To Your Room Voice | لسحب الجميع الي روومك
+     ❖ -bc => Broadcast | رسالة جماعية الى كل اعضاء السيرفر
+     ❖ -role @user <rank> => Give User Rank | لأعطاء رتبة لعضو معين
+     ❖ -roleremove @user <rank> => remove Rank From User | لازالة الرتبة من شخص معين
+     ❖ -role all <rank> => Give All Rank | لأعطاء رتبة للجميع
+     ❖ -role humans <rank> => Give Humans Rank | لأعطاء رتبة للاشخاص فقط
+     ❖ -role bots <rank> => Give Bots Rank | لأعطاء رتبة لجميع البوتات
+     ❖ -clear => Clear Chat | مسح الشات
+     ❖ -mute @user <reason> => Mute User | اعطاء العضو ميوت لازم رتبة <Muted>
+     ❖ -unmute @user => Unmute User | لفك الميوت عن الشخص 
+     ❖ -kick @user <reason> => Kick User From Server | طرد الشخص من السيرفر
+     ❖ -ban @user <reason> => Ban User From Server | حضر الشخص من السيرفر
+     ❖ -mct => Mute Channel | تقفيل الشات
+     ❖ -unmct => Unmute Channel | فتح الشات
+     ❖ -kv @user => Voice Kick | يطرد شخص من الرووم
+     ❖ -vonline => Create Channel Voice Online | يسوي رووم فويس اونلاين
+     ❖ -bans  ==> ban list | الاشخاص الي تبندو
      ** 
      ===========================================================
        React With ▶ To See Games Commands`,
  	`=-=-=-=-=-= **  Games Commands - اوامر الالعاب  ** =-=-=-=-=-=
-**   ❖ +xo @user => Game XO | لعب اكس او
-     ❖ +rps => Rock & Paper & Scissors | لعبة حجر ورقة مقص
-     ❖ +slots => Game Of Fruits | لعبة الفواكه
-     ❖ +زواج @user => لعبة الزواج
-     ❖ +speed => لعبة سرعة كتابة 
-     ❖ +لعبة فكك <= فكك
-     ❖ +لعبة عواصم <= عواصم
-     ❖ +البوت يعطيك نصائح <= هل تعلم
-     ❖ +skin => Ur Mc Skin
-     ❖ +لو خيروك => Funny Game Yay
+**   ❖ -xo @user => Game XO | لعب اكس او
+     ❖ -rps => Rock & Paper & Scissors | لعبة حجر ورقة مقص
+     ❖ -slots => Game Of Fruits | لعبة الفواكه
+     ❖ -زواج @user => لعبة الزواج
+     ❖ -speed => لعبة سرعة كتابة 
+     ❖ -لعبة فكك <= فكك
+     ❖ -لعبة عواصم <= عواصم
+     ❖ -البوت يعطيك نصائح <= هل تعلم
+     ❖ -skin => Ur Mc Skin
+     ❖ -لو خيروك => Funny Game Yay
 **
       ===========================================================
 	  React With ▶ To See Music Commands`,
 	`=-=-=-=-=-=  ** :musical_note: Music Commands  -  اوامر الاغاني :musical_note:**  =-=-=-=-=-=
-**	 ❖ +p => For Start Music | لتشغيل الاغاني
-	 ❖ +s => For Skip Music | لتخطي الاغنية
-	 ❖ +stop => For Stop Music | لأيقاف الاغنية
-     ❖ +vol => For Reduce or Raise The Sound | لخفض او رفع الصوت
-     ❖ +np => For See Name Music | لكي ترى اسم الاغنية
-     ❖ +q => To See The Music In The Queue | لكي ترا الاغاني التي في قائمة الانتظار
-     ❖ +pa => For Pause The Music | لأيقاف الاغنية مؤقتنا
-     ❖ +r => For Play Back The Music agin after its end | لأعادة تشغيل الاغنية بعد توقفها
+**	 ❖ -p => For Start Music | لتشغيل الاغاني
+	 ❖ -s => For Skip Music | لتخطي الاغنية
+	 ❖ -stop => For Stop Music | لأيقاف الاغنية
+     ❖ -vol => For Reduce or Raise The Sound | لخفض او رفع الصوت
+     ❖ -np => For See Name Music | لكي ترى اسم الاغنية
+     ❖ -q => To See The Music In The Queue | لكي ترا الاغاني التي في قائمة الانتظار
+     ❖ -pa => For Pause The Music | لأيقاف الاغنية مؤقتنا
+     ❖ -r => For Play Back The Music agin after its end | لأعادة تشغيل الاغنية بعد توقفها
 **
 	 ===========================================================
        React With ▶ To See Quran Commands`,
 	`=-=-=-=-=-= ** :kaaba: Quran Commands  -  اوامر القرأن :kaaba:**  =-=-=-=-=-=
-   **  ❖+قران => For Start Quran | لتشغيل القرأن
+   **  ❖-قران => For Start Quran | لتشغيل القرأن
 	 ❖:regional_indicator_a: القرآن كاملاً ماهر المعيقلي
      ❖:regional_indicator_b: سورة البقرة كاملة للشيخ مشاري العفاسي
      ❖:regional_indicator_c: سورة الكهف كاملة بصوت مشارى بن راشد العفاسي
@@ -573,61 +573,6 @@ we = "Lose :'("
 message.channel.send(`${slots1} | ${slots2} | ${slots3} - ${we}`)
 }
 });
-client.on("message", (message) => {
-    /// ALPHA CODES
-   if (message.content.startsWith("Wnew")) {     /// ALPHA CODES
-        const reason = message.content.split(" ").slice(1).join(" ");     /// ALPHA CODES
-        if (!message.guild.roles.exists("name", "Support Team")) return message.channel.send(`This server doesn't have a \`Support Team\` role made, so the ticket won't be opened.\nIf you are an administrator, make one with that name exactly and give it to users that should be able to see tickets.`);
-        if (message.guild.channels.exists("name", "ticket-{message.author.id}" + message.author.id)) return message.channel.send(`You already have a ticket open.`);    /// ALPHA CODES
-        message.guild.createChannel(`ticket-${message.author.username}`, "text").then(c => {
-            let role = message.guild.roles.find("name", "Support Team");
-            let role2 = message.guild.roles.find("name", "@everyone");
-            c.overwritePermissions(role, {
-                SEND_MESSAGES: true,
-                READ_MESSAGES: true
-            });    /// ALPHA CODES
-            c.overwritePermissions(role2, {
-                SEND_MESSAGES: false,
-                READ_MESSAGES: false
-            });
-            c.overwritePermissions(message.author, {
-                SEND_MESSAGES: true,
-                READ_MESSAGES: true
-            });
-            message.channel.send(`:white_check_mark: Your ticket has been created, #${c.name}.`);
-            const embed = new Discord.RichEmbed()
-                .setColor(0xCF40FA)
-                .addField(`Hey ${message.author.username}!`, `Please try explain why you opened this ticket with as much detail as possible. Our **Support Staff** will be here soon to help.`)
-                .setTimestamp();
-            c.send({
-                embed: embed
-            });
-        }).catch(console.error);
-    }
- 
- 
-  if (message.content.startsWith("Wclose")) {
-        if (!message.channel.name.startsWith(`ticket-`)) return message.channel.send(`You can't use the close command outside of a ticket channel.`);
- 
-       message.channel.send(`Are you sure? Once confirmed, you cannot reverse this action!\nTo confirm, type \`+close\`. This will time out in 10 seconds and be cancelled.`)
-           .then((m) => {
-               message.channel.awaitMessages(response => response.content === 'Wclose', {
-                       max: 1,
-                       time: 10000,
-                       errors: ['time'],
-                   })    
-                   .then((collected) => {
-                       message.channel.delete();
-                   })    
-                   .catch(() => {
-                       m.edit('Ticket close timed out, the ticket was not closed.').then(m2 => {
-                           m2.delete();
-                       }, 3000);
-                   });
-           });
-   }
- 
-});
 
 
 
@@ -685,19 +630,9 @@ client.on('message', async message => {
             }
           })
 
-client.on('message', message => {
-        if (message.content === "Winv") {
-            if(!message.channel.guild) return;
-        let embed = new Discord.RichEmbed()
-        .setAuthor(`『| ${message.author.username} |』`, message.author.avatarURL)      
-        .setTitle(`اضغط هنا لدعوه البوت`)
-        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=513589898381361167&permissions=0&scope=bot`)
-     message.channel.sendEmbed(embed);
-       }
-   });
 
 client.on('message', Sal => { // By : !!!,RaaXe ? ,??
-  if(Sal.content === 'Wbot-info') { //هنا تغير البرفيكس
+  if(Sal.content === '-bot-info') { //هنا تغير البرفيكس
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
   .setThumbnail(client.user.avatarURL)
@@ -711,7 +646,7 @@ client.on('message', Sal => { // By : !!!,RaaXe ? ,??
 });
 
 client.on('message', message => {
-    if (message.content.startsWith("Wavatar")) {
+    if (message.content.startsWith("-avatar")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
       if(mentionned){
@@ -728,7 +663,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-      if(message.content.startsWith ("Wmarry")) {
+      if(message.content.startsWith ("-marry")) {
       if(!message.channel.guild) return message.reply('** This command only for servers **')
       var proposed = message.mentions.members.first()
      
@@ -757,7 +692,7 @@ message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
 });
 
 client.on('message', message => {
-var prefix = "W"
+var prefix = "-"
         if(message.content.startsWith(prefix + 'hypixel')) {
             let args = message.content.split(' ').slice(1).join(' ');
             if (!args) return message.channel.send("**رجأء ضع اسمك في ماين كرافت. ?**");
@@ -824,7 +759,7 @@ client.on('message', message => {
 client.on('message',async message => {
     const moment = require('moment');
 const ms = require('ms')
-    var prefix = 'W' //بريفكس البوت
+    var prefix = '-' //بريفكس البوت
   var time = moment().format('Do MMMM YYYY , hh:mm');
   var room;
   var title;
@@ -914,7 +849,7 @@ hours = 12;
 
 client.on('message', message => {
               if (!message.channel.guild) return;
-      if(message.content =='Wmember')
+      if(message.content =='-member')
       var IzRo = new Discord.RichEmbed()
       .setThumbnail(message.author.iconURL)
       .setFooter(message.author.username, message.author.avatarURL)
